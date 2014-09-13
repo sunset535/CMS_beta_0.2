@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="User" type="com.ssm3.entity.User" />
+		<typeAlias alias="Category" type="com.ssm3.entity.Category" />
+		<typeAlias alias="Article" type="com.ssm3.entity.Article" />
+		<typeAlias alias="Recruitment" type="com.ssm3.entity.Recruitment" />
+		<typeAlias alias="Product" type="com.ssm3.entity.Product" />
+	</typeAliases>
+	 
+	<typeHandlers>     
+	    <typeHandler javaType="User" jdbcType="INTEGER" 
+	        handler="com.ssm3.mapper.typehandler.UserTypeHandler"/>
+	</typeHandlers>
+
+	<mappers>
+		<mapper resource="com/ssm3/mapper/UserMapper.xml" />
+		<mapper resource="com/ssm3/mapper/ArticleMapper.xml" />
+		<mapper resource="com/ssm3/mapper/CategoryMapper.xml" />
+		<mapper resource="com/ssm3/mapper/RecruitmentMapper.xml" />
+		<mapper resource="com/ssm3/mapper/ProductMapper.xml" />
+	</mappers>
+</configuration>
